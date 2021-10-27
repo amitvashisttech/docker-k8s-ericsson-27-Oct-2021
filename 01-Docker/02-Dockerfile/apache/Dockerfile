@@ -13,6 +13,9 @@ RUN apt-get install apache2 -y
 # Deploy Custom Web Page
 COPY index.html /var/www/html/ 
 
+# Expose 80
+EXPOSE 80
+
 # Excute the Apache Process
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
