@@ -99,3 +99,68 @@
    98  cd 01-Docker_Containers/
    99  ls
   100  history > Day1_History.txt 
+  101  cd ../../
+  102  git add . ; git commit -m "Day1_History.txt"; git push 
+  103  ls
+  104  mkdir 02-Dockerfile
+  105  ls
+  106  mv 02-Dockerfile 01-Docker/
+  107  ls
+  108  cd 01-Docker/
+  109  ls
+  110  cd 02-Dockerfile/
+  111  ls
+  112  mkidr apache
+  113  mkdir apache
+  114  s
+  115  ls
+  116  cd apache/
+  117  ls
+  118  vim Dockerfile
+  119  ls
+  120  docker build -t testapache:v1 . 
+  121  docker images 
+  122  docker run -d --name test-apache-1 testapache:v1 
+  123  ls
+  124  vim Dockerfile 
+  125  docker build -t testapache:v1 . 
+  126  docker run -d --name test-apache-2 testapache:v1 
+  127  docker ps 
+  128  docker inspect --format '{{.Name}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  129  curl 172.17.0.2
+  130  ls
+  131  vim index.html
+  132  ls
+  133  vim Dockerfile 
+  134  ls
+  135  curl 172.17.0.2
+  136  docker images 
+  137  docker build -t testapache:v2 . 
+  138  docker images 
+  139  docker run -d --name test-apache-3 testapache:v2
+  140  docker ps 
+  141  docker inspect --format '{{.Name}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  142  curl 172.17.0.2
+  143  curl 172.17.0.3
+  144  ls
+  145  docker images 
+  146  docker login 
+  147  ls
+  148  docker push testapache:v1 
+  149  docker tag testapache:v1 amitvashist7/webapp-27-oct-2021:v1
+  150  docker images 
+  151  docker push amitvashist7/webapp-27-oct-2021:v1
+  152  docker tag testapache:v2 amitvashist7/webapp-27-oct-2021:v2
+  153  docker images 
+  154  docker push amitvashist7/webapp-27-oct-2021:v2
+  155  docker images 
+  156  docker inspect 3fceacb718ae
+  157  docker history 3fceacb718ae
+  158  ls
+  159  cd ..
+  160  ls
+  161  cd ..
+  162  ls
+  163  cd 01-Docker_Containers/
+  164  ls
+  165  history > Day1_History.txt 
