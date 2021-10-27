@@ -1,0 +1,23 @@
+    1  docker version 
+    2  systemctl status docker 
+    3  ls
+    4  docker run ubuntu echo "Welcome to Docker Demo."
+    5  docker run ubuntu echo "Welcome to Docker Demo - 2"
+    6  docker images 
+    7  docker container ls 
+    8  docker container ls -a
+    9  ls
+   10  docker image 
+   11  docker images
+   12  docker pull ubuntu:16.04
+   13  docker images 
+   14  docker run ubuntu cat /etc/os-release
+   15  docker run ubuntu:16.04 cat /etc/os-release
+   16  ls
+   17  cd docker-k8s-ericsson-27-Oct-2021/
+   18  ls
+   19  cd 01-Docker/
+   20  ls
+   21  cd 01-Docker_Containers/
+   22  ls
+   23  history > Day1_History.txt
