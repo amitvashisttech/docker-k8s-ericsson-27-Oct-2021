@@ -21,3 +21,81 @@
    21  cd 01-Docker_Containers/
    22  ls
    23  history > Day1_History.txt
+   24  ls
+   25  docker ps -a 
+   26  cd ..
+   27  ls
+   28  cd ..
+   29  ls
+   30  git add . ; git commit -m "Day1_History.txt"; git push 
+   31  vi /root/.bashrc 
+   32  source /root/.bashrc
+   33  git add . ; git commit -m "Day1_History.txt"; git push 
+   34  ls
+   35  cd 
+   36  docker ps 
+   37  docker run -it ubuntu:16.04 
+   38  hostname
+   39  uname  -a 
+   40  docker ps 
+   41  docker ps -a
+   42  docker run -it --name test-1  ubuntu:16.04 
+   43  docker run -it --name test-2  ubuntu:16.04 
+   44  docker run -itd --name test-3  ubuntu:16.04 
+   45  docker run -itd --name test-4  ubuntu:16.04 
+   46  docker run -itd --name test-5  ubuntu:16.04 
+   47  docker ps 
+   48  docker ps -l
+   49  docker run -itd --name test-6  ubuntu:16.04 
+   50  docker ps -l
+   51  docker ps -lq
+   52  docker inspect $(docker ps -lq
+)
+   53  docker inspect --format '{{.Name}} {{.NetworkSettings.IPAddress}}' $(docker ps -ql)
+   54  docker ps 
+   55  docker ps -q
+   56  docker inspect --format '{{.Name}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+   57  docker ps 
+   58  docker stop test-5
+   59  docker ps 
+   60  docker run -itd --name test-7  ubuntu:16.04 
+   61  docker inspect --format '{{.Name}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+   62  docker ps 
+   63  docker ps -a
+   64  docker ps 
+   65  docker start test-5
+   66  docker ps 
+   67  docker inspect --format '{{.Name}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+   68  ls
+   69  docker ps 
+   70  docker attach test-7
+   71  docker ps 
+   72  docker exec -it test-7 cat hello.txt
+   73  docker exec -it test-7 cat /root/hello.txt
+   74  ls
+   75  docker ps 
+   76  docker ps -q
+   77  docker kill $(docker ps -q)
+   78  docker ps 
+   79  docker ps -a
+   80  docker start test-7 
+   81  docker ps 
+   82  docker exec -it test-7 cat /root/hello.txt
+   83  docker ps -a
+   84  docker rm test-6 
+   85  docker ps -a
+   86  docker ps 
+   87  docker ps -a
+   88  docker ps -aq
+   89  docker rm $(docker ps -aq)
+   90* docker kill
+   91  docker rm $(docker ps -aq) --force 
+   92  docker ps -a
+   93  ls
+   94  cd docker-k8s-ericsson-27-Oct-2021/
+   95  ls
+   96  cd 01-Docker/
+   97  ls
+   98  cd 01-Docker_Containers/
+   99  ls
+  100  history > Day1_History.txt 
