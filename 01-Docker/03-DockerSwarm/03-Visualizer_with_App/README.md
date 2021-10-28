@@ -1,3 +1,4 @@
+```
     1  ls
     2  docker node ls 
     3  docker service ls 
@@ -88,3 +89,4 @@
    88  docker service create --replicas 3 --name hello-swarm nginx
    89  ls
    90  history > README.md
+```
