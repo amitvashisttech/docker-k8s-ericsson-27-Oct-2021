@@ -1,30 +1,5 @@
 # In the following demo will be setting up 3 Node Kubernetes Cluster ( 1 Master & 2 Workers ) 
 
-## For this demo will be required to have following tools installed. 
-1.	Virtual Box
-2.	Vagrant 
-3.	Cmder / Git Bash 
-
-## First clone this repository on your windows machine.
-
-```
-git clone https://github.com/amitvashisttech/docker-kubernetes-ericsson-04-Oct-2021.git
-``` 
-
-## Now provision three virtual machines with following commands:
-
-```
-cd docker-kubernetes-ericsson-04-Oct-2021/02-K8s/00-Setup
-vagrant.exe up
-
-
-vagrant.exe status
-Current machine states:
-
-master                    running (virtualbox)
-worker1                   running (virtualbox)
-worker2                   running (virtualbox)
-```
 
 ## Login to master node & clone the repo after that execute install-kubernetes.sh. 
 
@@ -36,8 +11,8 @@ Note :
 ```
 vagrant.exe ssh master
 sudo su - 
-git clone To https://github.com/amitvashisttech/docker-kubernetes-ericsson-04-Oct-2021.git
-cd docker-kubernetes-ericsson-04-Oct-2021/02-Kubernetes/00-Setup
+git clone To https://github.com/amitvashisttech/docker-k8s-ericsson-27-Oct-2021.git
+cd docker-k8s-ericsson-27-Oct-2021/02-Kubernetes/00-Setup
 sh install-k8s-master-node.sh
 
 ---
@@ -76,8 +51,8 @@ k8s-master   Ready    master   5m6s   v1.18.0
 ```
 vagrant.exe ssh woker1
 sudo su - 
-git clone To https://github.com/amitvashisttech/docker-kubernetes-ericsson-04-Oct-2021.git
-cd docker-kubernetes-ericsson-04-Oct-2021/02-K8s/00-Setup
+git clone To https://github.com/amitvashisttech/docker-k8s-ericsson-27-Oct-2021.git
+cd docker-k8s-ericsson-27-Oct-2021/02-Kubernetes/00-Setup
 sh install-k8s-worker-node.sh
 ```
 
