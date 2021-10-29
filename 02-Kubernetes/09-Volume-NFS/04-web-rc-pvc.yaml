@@ -24,8 +24,6 @@ spec:
             # name must match the volume name below
             - name: nfs
               mountPath: "/usr/share/nginx/html"
-      imagePullSecrets:
-      - name: regcred
       volumes:
       - name: nfs
         persistentVolumeClaim:

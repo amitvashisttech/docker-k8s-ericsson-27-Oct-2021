@@ -26,8 +26,6 @@ spec:
           # name must match the volume name below
           - name: nfs
             mountPath: "/mnt"
-      imagePullSecrets:
-      - name: regcred
       volumes:
       - name: nfs
         persistentVolumeClaim:
