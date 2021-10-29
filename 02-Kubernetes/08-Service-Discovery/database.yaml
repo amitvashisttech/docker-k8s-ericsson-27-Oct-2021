@@ -5,8 +5,6 @@ metadata:
   labels:
     app: database
 spec:
-  imagePullSecrets:
-  - name: regcred
   containers:
   - name: mysql
     imagePullPolicy: IfNotPresent
